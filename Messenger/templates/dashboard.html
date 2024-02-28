@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user.name }}</h1>
+    <h2>Send Message</h2>
+    <form method="post">
+        <input type="email" name="recipient" placeholder="Recipient Email" required><br>
+        <textarea name="message" placeholder="Message" required></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+    <a href="{{ url_for('inbox', email=user.email) }}">View Inbox</a>
+</body>
+</html>
